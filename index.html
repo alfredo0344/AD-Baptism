@@ -96,6 +96,9 @@
         .header-content {
             position: relative;
             z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .header-ornament {
@@ -112,9 +115,7 @@
             margin-bottom: 8px;
             letter-spacing: 1px;
             color: #fff;
-            -webkit-text-stroke: 1.5px #000;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            text-wrap: balance;
         }
 
         .header p {
@@ -123,6 +124,7 @@
             font-weight: 300;
             letter-spacing: 3px;
             text-transform: uppercase;
+            text-align: center;
         }
 
         .floral-divider {
@@ -658,8 +660,11 @@
         }
 
         @media (max-width: 520px) {
+            .header {
+                padding: 40px 20px;
+            }
             .header h1 {
-                font-size: 2rem;
+                font-size: 4rem;
             }
             
             .header p {
@@ -930,6 +935,7 @@
         <input type="text" name="appetizers" id="formAppetizers">
         <input type="text" name="main_courses" id="formMainCourses">
         <input type="text" name="cocktails" id="formCocktails">
+        <input type="text" name="guest_names" id="formGuestNames">
         <input type="text" name="notes" id="formNotes">
     </form>
 
@@ -1344,7 +1350,16 @@
             });
 
             function sendConfirmation() {
+                let allGuestNames = formData.guestName;
+                for (let i = 2; i <= formData.guestCount; i++) {
+                    const name = formData[`guestName${i}`];
+                    if (name && name.trim()) {
+                        allGuestNames += ', ' + name;
+                    }
+                }
+                
                 document.getElementById('formGuestName').value = formData.guestName;
+                document.getElementById('formGuestNames').value = allGuestNames;
                 document.getElementById('formAttendance').value = formData.attendance === 'yes' ? 'Yes' : 'No';
                 document.getElementById('formReception').value = formData.reception === 'yes' ? 'Yes' : 'No';
                 document.getElementById('formCompanion').value = formData.companion;
