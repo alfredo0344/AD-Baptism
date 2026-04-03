@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonietta Dentici - Baptism Confirmation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #fdf6f3 0%, #f8e8e4 50%, #f5ebe6 100%);
+            min-height: 100vh;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        .peony-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .peony-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+
+        .peony-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(253, 246, 243, 0.4) 0%, rgba(248, 232, 228, 0.4) 50%, rgba(245, 235, 230, 0.4) 100%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 30px;
+            box-shadow: 
+                0 25px 80px rgba(230, 206, 170, 0.25),
+                0 10px 30px rgba(230, 206, 170, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            border: 1px solid rgba(230, 206, 170, 0.3);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #e6ceaa 0%, #d4b896 30%, #c9a87a 70%, #b8946b 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            right: -100px;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-ornament {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+            margin: 0 auto 20px;
+        }
+
+        .header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.5rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            color: #fff;
+            -webkit-text-stroke: 1.5px #000;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-wrap: balance;
+        }
+
+        .header p {
+            font-size: 1rem;
+            opacity: 0.95;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .floral-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .floral-line {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+        }
+
+        .floral-icon {
+            width: 12px;
+            height: 12px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .floral-icon::before,
+        .floral-icon::after {
+            content: '';
+            position: absolute;
+            background: rgba(255,255,255,0.4);
+            border-radius: 50%;
+        }
+
+        .floral-icon::before {
+            width: 6px;
+            height: 6px;
+            top: -8px;
+            left: 3px;
+        }
+
+        .floral-icon::after {
+            width: 4px;
+            height: 4px;
+            bottom: -6px;
+            left: 4px;
+        }
+
+        .form-container {
+            padding: 45px 50px;
+        }
+
+        .step {
+            display: none;
+            animation: fadeIn 0.6s ease;
+        }
+
+        .step.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .step h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.9rem;
+            color: #5a5045;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .step h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #e6ceaa, transparent);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: #5a5045;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"] {
+            width: 100%;
+            padding: 16px 20px;
+            border: 1.5px solid #e6ceaa;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s;
+            background: #ffffff;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #e6ceaa;
+            box-shadow: 0 0 0 3px rgba(230, 206, 170, 0.25);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .radio-option {
+            flex: 1;
+            max-width: 200px;
+        }
+
+        .radio-option input[type="radio"] {
+            display: none;
+        }
+
+        .radio-option label {
+            display: block;
+            padding: 20px 15px;
+            text-align: center;
+            background: linear-gradient(180deg, #ffffff 0%, #faf5ee 100%);
+            border: 1.5px solid #e6ceaa;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #5a5045;
+            margin-bottom: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .radio-option label::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #e6ceaa 0%, #d4b896 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .radio-option input[type="radio"]:checked + label {
+            background: linear-gradient(135deg, #e6ceaa 0%, #d4b896 100%);
+            color: white;
+            border-color: #d4b896;
+            box-shadow: 0 8px 20px rgba(230, 206, 170, 0.4);
+        }
+
+        .radio-option label:hover {
+            border-color: #e6ceaa;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(230, 206, 170, 0.3);
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 16px 30px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #e6ceaa 0%, #d4b896 100%);
+            color: white;
+            box-shadow: 0 6px 20px rgba(230, 206, 170, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(230, 206, 170, 0.5);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(180deg, #ffffff 0%, #f5ede0 100%);
+            color: #5a5045;
+            border: 1.5px solid #e6ceaa;
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(180deg, #fff 0%, #faf5ee 100%);
+            border-color: #e6ceaa;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .checkbox-group, .select-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .checkbox-option, .select-option {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            background: linear-gradient(180deg, #ffffff 0%, #faf5ee 100%);
+            border: 1.5px solid #e6ceaa;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .checkbox-option:hover, .select-option:hover {
+            border-color: #e6ceaa;
+            background: linear-gradient(180deg, #fff 0%, #fdfbf8 100%);
+        }
+
+        .checkbox-option.selected, .select-option.selected {
+            background: linear-gradient(135deg, #e6ceaa 0%, #d4b896 100%);
+            color: white;
+            border-color: #d4b896;
+        }
+
+        .checkbox-option input, .select-option input {
+            display: none;
+        }
+
+        .checkbox-option span, .select-option span {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .checkbox-option .check-icon, .select-option .check-icon {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #d4c0b4;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+
+        .checkbox-option.selected .check-icon, .select-option.selected .check-icon {
+            background: white;
+            color: #d4b896;
+            border-color: white;
+        }
+
+        .drinks-section {
+            margin-top: 25px;
+        }
+
+        .drinks-section > label {
+            text-align: center;
+            display: block;
+            margin-bottom: 15px;
+            color: #5a5045;
+        }
+
+        .drinks-warning {
+            background: linear-gradient(180deg, #fef9e7 0%, #fdf3d7 100%);
+            border: 1px solid #e6ceaa;
+            border-radius: 10px;
+            padding: 14px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #8a7a5a;
+            text-align: center;
+        }
+
+        .drinks-counter {
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #5a5045;
+            font-size: 0.95rem;
+        }
+
+        .number-select-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .number-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 22px;
+            background: linear-gradient(180deg, #ffffff 0%, #faf5ee 100%);
+            border: 1.5px solid #e6ceaa;
+            border-radius: 14px;
+            transition: all 0.3s;
+        }
+
+        .number-option span {
+            color: #5a5045;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .number-option.has-items {
+            background: linear-gradient(135deg, #e6ceaa 0%, #d4b896 100%);
+            border-color: #d4b896;
+        }
+
+        .number-option.has-items span {
+            color: white;
+        }
+
+        .number-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .num-btn {
+            width: 38px;
+            height: 38px;
+            border: 1.5px solid #d4c0b4;
+            background: white;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8a7a6a;
+        }
+
+        .num-btn:hover {
+            background: linear-gradient(135deg, #e6ceaa 0%, #d4b896 100%);
+            border-color: #d4b896;
+            color: white;
+        }
+
+        .num-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .num-btn:disabled:hover {
+            background: white;
+            border-color: #d4c0b4;
+            color: #8a7a6a;
+        }
+
+        .num-input {
+            width: 55px;
+            height: 38px;
+            border: 1.5px solid #e6ceaa;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #5a5045;
+            background: white;
+        }
+
+        .num-input:focus {
+            outline: none;
+            border-color: #e6ceaa;
+        }
+
+        .number-option.has-items .num-btn {
+            border-color: rgba(255,255,255,0.5);
+            color: white;
+        }
+
+        .number-option.has-items .num-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .number-option.has-items .num-input {
+            background: rgba(255,255,255,0.95);
+            border-color: rgba(255,255,255,0.5);
+            color: #5a5045;
+        }
+
+        .form-group textarea {
+            width: 100%;
+            padding: 16px 20px;
+            border: 1.5px solid #e6ceaa;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            resize: vertical;
+            min-height: 110px;
+            transition: border-color 0.3s;
+            background: #ffffff;
+        }
+
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #e6ceaa;
+            box-shadow: 0 0 0 3px rgba(230, 206, 170, 0.25);
+        }
+
+        .progress-bar {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 25px 40px;
+            background: linear-gradient(180deg, #ffffff 0%, #faf5ee 100%);
+            border-bottom: 1px solid rgba(230, 206, 170, 0.3);
+        }
+
+        .progress-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #e6ceaa;
+            transition: all 0.4s;
+            position: relative;
+        }
+
+        .progress-dot::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            transition: all 0.4s;
+        }
+
+        .progress-dot.active {
+            background: linear-gradient(135deg, #e6ceaa 0%, #d4b896 100%);
+            transform: scale(1.15);
+        }
+
+        .progress-dot.active::before {
+            border-color: rgba(230, 206, 170, 0.4);
+        }
+
+        .progress-dot.completed {
+            background: linear-gradient(135deg, #d4b896 0%, #c9a87a 100%);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .disabled-group {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .disabled-group label {
+            color: #aaa !important;
+        }
+
+        .soft-drinks-notice {
+            background: linear-gradient(180deg, #e8f5e9 0%, #d4edda 100%);
+            border: 1px solid #c3e6cb;
+            border-radius: 14px;
+            padding: 18px;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .soft-drinks-notice p {
+            color: #2e7d32;
+            font-size: 0.95rem;
+        }
+
+        .soft-drinks-notice strong {
+            font-weight: 600;
+        }
+
+        .guest-names-container {
+            margin-top: 20px;
+            padding: 20px;
+            background: linear-gradient(180deg, #ffffff 0%, #faf5ee 100%);
+            border: 1px solid #e6ceaa;
+            border-radius: 14px;
+        }
+
+        .guest-name-input {
+            margin-bottom: 12px;
+        }
+
+        .guest-name-input input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1.5px solid #e6ceaa;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: 'Montserrat', sans-serif;
+            background: #ffffff;
+            transition: all 0.3s;
+        }
+
+        .guest-name-input input:focus {
+            outline: none;
+            border-color: #d4b896;
+            box-shadow: 0 0 0 3px rgba(230, 206, 170, 0.25);
+        }
+
+        @media (max-width: 520px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 0.85rem;
+                letter-spacing: 2px;
+            }
+            
+            .form-container {
+                padding: 35px 25px;
+            }
+
+            .radio-group {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .radio-option {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="peony-bg">
+        <img src="images/peony1.jpeg" alt="">
+    </div>
+    <div class="peony-overlay"></div>
+
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <div class="header-ornament"></div>
+                <h1>Antonietta Dentici</h1>
+                <p>Baptism Celebration</p>
+                <div class="floral-divider">
+                    <div class="floral-line"></div>
+                    <div class="floral-icon"></div>
+                    <div class="floral-line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-dot active" id="dot1"></div>
+            <div class="progress-dot" id="dot2"></div>
+            <div class="progress-dot" id="dot3"></div>
+        </div>
+
+        <div class="form-container">
+            <!-- Step 1: Basic Attendance -->
+            <div class="step active" id="step1">
+                <h2>Will You Attend?</h2>
+                
+                <div class="form-group">
+                    <label for="guestName">Your Name</label>
+                    <input type="text" id="guestName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Will you attend the baptism?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="attendance" id="attendYes" value="yes">
+                            <label for="attendYes">Yes, I'll be there</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="attendance" id="attendNo" value="no">
+                            <label for="attendNo">No, I can't make it</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn btn-primary" id="next1" disabled>Continue</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Reception Attendance -->
+            <div class="step" id="step2">
+                <h2>Reception Confirmation</h2>
+                
+                <div class="form-group">
+                    <label>Will you attend the reception?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="reception" id="receptionYes" value="yes">
+                            <label for="receptionYes">Yes, I'll attend</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="reception" id="receptionNo" value="no">
+                            <label for="receptionNo">No, just the baptism</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn btn-secondary" id="back2">Back</button>
+                    <button class="btn btn-primary" id="next2" disabled>Continue</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Reception Details -->
+            <div class="step" id="step3">
+                <h2>Reception Details</h2>
+                
+                <div class="form-group">
+                    <label>Will you come alone or with company?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="companion" id="alone" value="alone">
+                            <label for="alone">I'll come alone</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="companion" id="accompanied" value="accompanied">
+                            <label for="accompanied">I'll bring company</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" id="companionGroup">
+                    <label>Number of guests (including yourself)</label>
+                    <div class="select-group" id="companionCount">
+                        <div class="select-option" data-value="1">
+                            <input type="radio" name="guestCount" value="1">
+                            <span><span class="check-icon">1</span> 1 person (Only me)</span>
+                        </div>
+                        <div class="select-option" data-value="2">
+                            <input type="radio" name="guestCount" value="2">
+                            <span><span class="check-icon">2</span> 2 people</span>
+                        </div>
+                        <div class="select-option" data-value="3">
+                            <input type="radio" name="guestCount" value="3">
+                            <span><span class="check-icon">3</span> 3 people</span>
+                        </div>
+                        <div class="select-option" data-value="4">
+                            <input type="radio" name="guestCount" value="4">
+                            <span><span class="check-icon">4</span> 4 people</span>
+                        </div>
+                        <div class="select-option" data-value="5">
+                            <input type="radio" name="guestCount" value="5">
+                            <span><span class="check-icon">5</span> 5 people</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guest-names-container" id="guestNamesContainer" style="display: none;">
+                    <label style="display: block; margin-bottom: 15px; color: #5a5045; font-weight: 500;">Guest Names (please enter each name)</label>
+                    <div id="guestNamesList"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Appetizer (Select quantity for each option)</label>
+                    <div class="drinks-warning" style="margin-bottom: 10px;">
+                        Maximum <span id="maxAppetizers">1</span> appetizers total (1 per person)
+                    </div>
+                    <div class="drinks-counter" id="appetizerCounter">Appetizers: 0 / 1</div>
+                    <div class="number-select-group" id="appetizerGroup">
+                        <div class="number-option" data-value="House Salad">
+                            <span>House Salad</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Romaine, Field Greens, Granny Smith Apples, Goat Cheese, Walnuts, Sherry Mustard Vinaigrette</small>
+                            <div class="number-controls">
+                                <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                <input type="number" class="num-input" value="0" min="0" readonly>
+                                <button type="button" class="num-btn plus" data-action="plus">+</button>
+                            </div>
+                        </div>
+                        <div class="number-option" data-value="Caesar Salad">
+                            <span>Caesar Salad</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Crisp Romaine, Parmesan Garlic Dressing, Brioche Croutons</small>
+                            <div class="number-controls">
+                                <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                <input type="number" class="num-input" value="0" min="0" readonly>
+                                <button type="button" class="num-btn plus" data-action="plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Main Course (Select quantity for each option)</label>
+                    <div class="drinks-warning" style="margin-bottom: 10px;">
+                        Maximum <span id="maxMainCourse">1</span> main courses total (1 per person)
+                    </div>
+                    <div class="drinks-counter" id="mainCourseCounter">Main Courses: 0 / 1</div>
+                    <div class="number-select-group" id="mainCourseGroup">
+                        <div class="number-option" data-value="Roasted Chicken">
+                            <span>Roasted Chicken</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Spinach Bread Salad, Roasted Tomatoes, Olives, Balsamic Jus</small>
+                            <div class="number-controls">
+                                <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                <input type="number" class="num-input" value="0" min="0" readonly>
+                                <button type="button" class="num-btn plus" data-action="plus">+</button>
+                            </div>
+                        </div>
+                        <div class="number-option" data-value="Filet Mignon">
+                            <span>Filet Mignon</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Gouda Potato Cake, Seared Spinach, Cabernet Jus</small>
+                            <div class="number-controls">
+                                <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                <input type="number" class="num-input" value="0" min="0" readonly>
+                                <button type="button" class="num-btn plus" data-action="plus">+</button>
+                            </div>
+                        </div>
+                        <div class="number-option" data-value="Chilean Sea Bass">
+                            <span>Chilean Sea Bass</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Brocollini, Pearl Onion, Potato Puree, Truffle Vinaigrette</small>
+                            <div class="number-controls">
+                                <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                <input type="number" class="num-input" value="0" min="0" readonly>
+                                <button type="button" class="num-btn plus" data-action="plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="drinks-section">
+                    <label>Cocktails (Max 2 per person)</label>
+                    <div class="drinks-warning">
+                        Maximum 2 cocktails per person. Total: <span id="maxCocktails">2</span>
+                    </div>
+                    <div class="drinks-counter" id="drinksCounter">Cocktails: 0 / 2</div>
+                    <div class="number-select-group" id="drinksGroup">
+                        <div class="number-option" data-value="Bourbon Old Fashioned">
+                            <span>Bourbon Old Fashioned</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Buffalo Trace Bourbon, Aperol, Simple Syrup, Angostura Aromatic Bitters</small>
+                            <div class="number-controls">
+                                <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                <input type="number" class="num-input" value="0" min="0" readonly>
+                                <button type="button" class="num-btn plus" data-action="plus">+</button>
+                            </div>
+                        </div>
+                        <div class="number-option" data-value="Berries & Bubbles">
+                            <span>Berries & Bubbles</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Belvedere Organic Lemon & Basil Vodka, Marinated Blackberries, Fresh Lemon Juice, Piper Sonoma Brut, Dry Ice Smoke</small>
+                            <div class="number-controls">
+                                <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                <input type="number" class="num-input" value="0" min="0" readonly>
+                                <button type="button" class="num-btn plus" data-action="plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="soft-drinks-notice">
+                    <p><strong>Soft Drinks</strong><br>
+                    Soft drinks will be available at the venue</p>
+                </div>
+
+                <div class="form-group" style="margin-top: 25px;">
+                    <label for="additionalNotes">Additional Notes</label>
+                    <textarea id="additionalNotes" placeholder="Any dietary restrictions, allergies, or special requests..."></textarea>
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn btn-secondary" id="back3">Back</button>
+                    <button class="btn btn-primary" id="submitBtn">Send Confirmation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="confirmationForm" action="https://formspree.io/f/xdapwlvw" method="POST" style="display: none;">
+        <input type="text" name="guest_name" id="formGuestName">
+        <input type="text" name="attendance" id="formAttendance">
+        <input type="text" name="reception" id="formReception">
+        <input type="text" name="companion" id="formCompanion">
+        <input type="text" name="guest_count" id="formGuestCount">
+        <input type="text" name="appetizers" id="formAppetizers">
+        <input type="text" name="main_courses" id="formMainCourses">
+        <input type="text" name="cocktails" id="formCocktails">
+        <input type="text" name="notes" id="formNotes">
+    </form>
+
+    <script>
+        (function() {
+            let formData = {
+                guestName: '',
+                attendance: '',
+                reception: '',
+                companion: '',
+                guestCount: 1,
+                appetizers: {},
+                mainCourses: {},
+                cocktails: {},
+                additionalNotes: ''
+            };
+
+            let maxCocktailsPerPerson = 2;
+
+            function updateProgress(step) {
+                document.querySelectorAll('.progress-dot').forEach((dot, index) => {
+                    dot.classList.remove('active', 'completed');
+                    if (index + 1 < step) {
+                        dot.classList.add('completed');
+                    } else if (index + 1 === step) {
+                        dot.classList.add('active');
+                    }
+                });
+            }
+
+            function showStep(stepNum) {
+                document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
+                document.getElementById(`step${stepNum}`).classList.add('active');
+                updateProgress(stepNum);
+            }
+
+            document.getElementById('guestName').addEventListener('input', function() {
+                formData.guestName = this.value;
+                validateStep1();
+            });
+
+            document.querySelectorAll('input[name="attendance"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    formData.attendance = this.value;
+                    validateStep1();
+                });
+            });
+
+            function validateStep1() {
+                const nameValid = formData.guestName.trim().length > 0;
+                const attendanceValid = formData.attendance !== '';
+                document.getElementById('next1').disabled = !(nameValid && attendanceValid);
+            }
+
+            document.getElementById('next1').addEventListener('click', function() {
+                if (formData.attendance === 'no') {
+                    sendSimpleConfirmation();
+                } else {
+                    showStep(2);
+                }
+            });
+
+            document.querySelectorAll('input[name="reception"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    formData.reception = this.value;
+                    document.getElementById('next2').disabled = false;
+                });
+            });
+
+            document.getElementById('back2').addEventListener('click', function() {
+                showStep(1);
+            });
+
+            document.getElementById('next2').addEventListener('click', function() {
+                if (formData.reception === 'no') {
+                    sendBaptismOnlyConfirmation();
+                } else {
+                    showStep(3);
+                }
+            });
+
+            function sendBaptismOnlyConfirmation() {
+                document.getElementById('formGuestName').value = formData.guestName;
+                document.getElementById('formAttendance').value = 'Yes';
+                document.getElementById('formReception').value = 'No - Just the baptism';
+                document.getElementById('formCompanion').value = 'N/A';
+                document.getElementById('formGuestCount').value = '1';
+                document.getElementById('formAppetizers').value = 'N/A';
+                document.getElementById('formMainCourses').value = 'N/A';
+                document.getElementById('formCocktails').value = 'N/A';
+                document.getElementById('formNotes').value = 'Guest will attend baptism only, not reception';
+                
+                const form = document.getElementById('confirmationForm');
+                
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    showThankYouBaptismOnly();
+                }).catch(error => {
+                    showThankYouBaptismOnly();
+                });
+            }
+
+            function showThankYouBaptismOnly() {
+                document.body.innerHTML = `
+                    <div class="peony-bg">
+                        <img src="images/peony1.jpeg" alt="">
+                    </div>
+                    <div class="peony-overlay"></div>
+                    
+                    <div class="container" style="animation: fadeIn 0.8s ease;">
+                        <div class="header">
+                            <div class="header-content">
+                                <div class="header-ornament"></div>
+                                <h1>Thank You!</h1>
+                                <p>Your confirmation has been received</p>
+                                <div class="floral-divider">
+                                    <div class="floral-line"></div>
+                                    <div class="floral-icon"></div>
+                                    <div class="floral-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-container" style="text-align: center;">
+                            <h2 style="font-family: 'Cormorant Garamond', serif; color: #5a5045; margin-bottom: 20px; font-weight: 500;">
+                                We can't wait to celebrate with you!
+                            </h2>
+                            <p style="color: #8a7a7a; line-height: 1.8; margin-bottom: 30px;">
+                                Your response has been recorded.<br>
+                                We'll see you at the baptism!
+                            </p>
+                            
+                            <div style="background: linear-gradient(180deg, #ffffff 0%, #faf5ee 100%); border-radius: 20px; padding: 30px; margin-bottom: 25px; text-align: left; border: 1px solid #e6ceaa;">
+                                <h3 style="color: #5a5045; margin-bottom: 20px; font-weight: 500; text-align: center;">Baptism Details</h3>
+                                
+                                <div>
+                                    <p style="color: #5a5045; margin-bottom: 4px;"><strong>Date:</strong> May 3rd, 2026</p>
+                                    <p style="color: #5a5045; margin-bottom: 4px;"><strong>Time:</strong> 1:00 PM</p>
+                                    <p style="color: #5a5045; margin-bottom: 4px;"><strong>Location:</strong></p>
+                                    <p style="color: #5a5045; margin-left: 15px; margin-bottom: 2px;">St. Martha Catholic Church</p>
+                                    <p style="color: #5a5045; margin-left: 15px; margin-bottom: 2px;">200 N Orange Ave</p>
+                                    <p style="color: #5a5045; margin-left: 15px;">Sarasota, FL 34236</p>
+                                </div>
+                            </div>
+
+                            <div style="background: linear-gradient(180deg, #ffffff 0%, #faf5ee 100%); border-radius: 20px; padding: 30px; margin-bottom: 25px; border: 1px solid #e6ceaa;">
+                                <h3 style="color: #5a5045; margin-bottom: 15px; font-weight: 500;">Gift Information</h3>
+                                <p style="color: #5a5045; line-height: 1.7;">
+                                    If you'd like to honor Antonietta with a gift,<br>
+                                    <strong>cash gifts are most welcome</strong>.<br><br>
+                                    Thank you for your generosity!
+                                </p>
+                            </div>
+
+                            <div style="background: linear-gradient(180deg, #ffffff 0%, #faf5ee 100%); border-radius: 20px; padding: 30px; margin-bottom: 25px; border: 1px solid #e6ceaa;">
+                                <h3 style="color: #5a5045; margin-bottom: 15px; font-weight: 500;">Contact Information</h3>
+                                <p style="color: #5a5045; line-height: 1.7;">
+                                    For more information, please contact:<br>
+                                    <strong>Isabel Dentici</strong><br>
+                                    +1 (941) 284-4238
+                                </p>
+                            </div>
+
+                            <button class="btn btn-primary" onclick="location.reload()" style="margin-top: 10px;">
+                                Submit Another Response
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <style>
+                        * { margin: 0; padding: 0; box-sizing: border-box; }
+                        body {
+                            font-family: 'Montserrat', sans-serif;
+                            background: linear-gradient(135deg, #fdf6f3 0%, #f8e8e4 50%, #f5ebe6 100%);
+                            min-height: 100vh;
+                            padding: 30px 20px;
+                            position: relative;
+                        }
+                        .peony-bg {
+                            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
+                        }
+                        .peony-bg img {
+                            width: 100%; height: 100%; object-fit: cover; opacity: 0.6;
+                        }
+                        .peony-overlay {
+                            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                            background: linear-gradient(135deg, rgba(253, 246, 243, 0.4) 0%, rgba(248, 232, 228, 0.4) 50%, rgba(245, 235, 230, 0.4) 100%);
+                            z-index: 0; pointer-events: none;
+                        }
+                        .container {
+                            max-width: 650px; margin: 0 auto; background: #ffffff;
+                            border-radius: 30px;
+                            box-shadow: 0 25px 80px rgba(230, 206, 170, 0.25), 0 10px 30px rgba(230, 206, 170, 0.15);
+                            overflow: hidden; position: relative; z-index: 1;
+                            border: 1px solid rgba(230, 206, 170, 0.3);
+                        }
+                        .header {
+                            background: linear-gradient(135deg, #e6ceaa 0%, #d4b896 30%, #c9a87a 70%, #b8946b 100%);
+                            color: white; text-align: center; padding: 50px 40px; position: relative; overflow: hidden;
+                        }
+                        .header-content { position: relative; z-index: 1; }
+                        .header-ornament { width: 60px; height: 2px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent); margin: 0 auto 20px; }
+                        .header h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 600; margin-bottom: 8px; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+                        .header p { font-size: 1rem; opacity: 0.95; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; }
+                        .floral-divider { display: flex; align-items: center; justify-content: center; gap: 15px; margin: 15px 0; }
+                        .floral-line { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent); }
+                        .floral-icon { width: 12px; height: 12px; background: rgba(255,255,255,0.6); border-radius: 50%; position: relative; }
+                        .form-container { padding: 45px 50px; }
+                        .btn {
+                            flex: 1; padding: 16px 30px; border: none; border-radius: 12px;
+                            font-size: 1rem; font-family: 'Montserrat', sans-serif; font-weight: 500;
+                            cursor: pointer; transition: all 0.3s; letter-spacing: 0.5px;
+                        }
+                        .btn-primary {
+                            background: linear-gradient(135deg, #e6ceaa 0%, #d4b896 100%);
+                            color: white; box-shadow: 0 6px 20px rgba(230, 206, 170, 0.4);
+                        }
+                        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(230, 206, 170, 0.5); }
+                        @keyframes fadeIn {
+                            from { opacity: 0; transform: translateY(20px); }
+                            to { opacity: 1; transform: translateY(0); }
+                        }
+                    </style>
+                `;
+            }
+
+            document.querySelectorAll('input[name="companion"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    formData.companion = this.value;
+                    
+                    const companionGroup = document.getElementById('companionGroup');
+                    
+                    if (this.value === 'alone') {
+                        formData.guestCount = 1;
+                        companionGroup.classList.add('disabled-group');
+                        document.querySelectorAll('#companionCount .select-option').forEach(o => {
+                            o.classList.remove('selected');
+                            if (o.dataset.value === '1') {
+                                o.classList.add('selected');
+                                o.querySelector('input').checked = true;
+                            }
+                        });
+                    } else {
+                        companionGroup.classList.remove('disabled-group');
+                    }
+                    
+                    updateAllCounters();
+                });
+            });
+
+            document.querySelectorAll('#companionCount .select-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    if (formData.companion === 'alone') return;
+                    
+                    document.querySelectorAll('#companionCount .select-option').forEach(o => o.classList.remove('selected'));
+                    this.classList.add('selected');
+                    this.querySelector('input').checked = true;
+                    formData.guestCount = parseInt(this.dataset.value);
+                    updateGuestNameInputs();
+                    updateAllCounters();
+                });
+            });
+
+            function updateGuestNameInputs() {
+                const container = document.getElementById('guestNamesContainer');
+                const list = document.getElementById('guestNamesList');
+                const count = formData.guestCount;
+                
+                if (count <= 1) {
+                    container.style.display = 'none';
+                    return;
+                }
+                
+                container.style.display = 'block';
+                list.innerHTML = '';
+                
+                for (let i = 2; i <= count; i++) {
+                    const div = document.createElement('div');
+                    div.className = 'guest-name-input';
+                    div.innerHTML = `<input type="text" id="guestName${i}" placeholder="Guest ${i} name">`;
+                    list.appendChild(div);
+                }
+                
+                document.querySelectorAll('.guest-name-input input').forEach(input => {
+                    input.addEventListener('input', function() {
+                        const idx = this.id.replace('guestName', '');
+                        formData[`guestName${idx}`] = this.value;
+                    });
+                });
+            }
+
+            function setupNumberSelector(groupId, dataObj) {
+                const group = document.getElementById(groupId);
+                if (!group) return;
+                
+                group.querySelectorAll('.number-option').forEach(option => {
+                    const value = option.dataset.value;
+                    const input = option.querySelector('.num-input');
+                    const minusBtn = option.querySelector('.minus');
+                    const plusBtn = option.querySelector('.plus');
+                    
+                    minusBtn.addEventListener('click', function() {
+                        let current = parseInt(input.value);
+                        if (current > 0) {
+                            current--;
+                            input.value = current;
+                            dataObj[value] = current;
+                            updateOptionStyle(option, current);
+                            updateAllCounters();
+                        }
+                    });
+                    
+                    plusBtn.addEventListener('click', function() {
+                        let current = parseInt(input.value);
+                        let total = 0;
+                        Object.values(dataObj).forEach(v => total += v);
+                        
+                        let maxAllowed;
+                        if (groupId === 'drinksGroup') {
+                            maxAllowed = formData.guestCount * maxCocktailsPerPerson;
+                        } else {
+                            maxAllowed = formData.guestCount;
+                        }
+                        
+                        if (total >= maxAllowed) {
+                            return;
+                        }
+                        
+                        current++;
+                        input.value = current;
+                        dataObj[value] = current;
+                        updateOptionStyle(option, current);
+                        updateAllCounters();
+                    });
+                });
+            }
+
+            function updateOptionStyle(option, count) {
+                if (count > 0) {
+                    option.classList.add('has-items');
+                } else {
+                    option.classList.remove('has-items');
+                }
+            }
+
+            function updateAllCounters() {
+                let totalCocktails = 0;
+                Object.values(formData.cocktails).forEach(v => totalCocktails += v);
+                const maxCocktails = formData.guestCount * maxCocktailsPerPerson;
+                
+                const drinksCounter = document.getElementById('drinksCounter');
+                if (drinksCounter) {
+                    drinksCounter.textContent = `Cocktails: ${totalCocktails} / ${maxCocktails}`;
+                    drinksCounter.style.color = totalCocktails > maxCocktails ? '#dc3545' : '#7a5c5c';
+                }
+                
+                const maxCocktailsDisplay = document.getElementById('maxCocktails');
+                if (maxCocktailsDisplay) {
+                    maxCocktailsDisplay.textContent = maxCocktails;
+                }
+                
+                let totalAppetizers = 0;
+                Object.values(formData.appetizers).forEach(v => totalAppetizers += v);
+                const maxAppetizers = formData.guestCount;
+                
+                const appetizerCounter = document.getElementById('appetizerCounter');
+                if (appetizerCounter) {
+                    appetizerCounter.textContent = `Appetizers: ${totalAppetizers} / ${maxAppetizers}`;
+                    appetizerCounter.style.color = totalAppetizers > maxAppetizers ? '#dc3545' : '#7a5c5c';
+                }
+                
+                const maxAppetizersDisplay = document.getElementById('maxAppetizers');
+                if (maxAppetizersDisplay) {
+                    maxAppetizersDisplay.textContent = maxAppetizers;
+                }
+                
+                let totalMainCourses = 0;
+                Object.values(formData.mainCourses).forEach(v => totalMainCourses += v);
+                const maxMainCourses = formData.guestCount;
+                
+                const mainCourseCounter = document.getElementById('mainCourseCounter');
+                if (mainCourseCounter) {
+                    mainCourseCounter.textContent = `Main Courses: ${totalMainCourses} / ${maxMainCourses}`;
+                    mainCourseCounter.style.color = totalMainCourses > maxMainCourses ? '#dc3545' : '#7a5c5c';
+                }
+                
+                const maxMainCourseDisplay = document.getElementById('maxMainCourse');
+                if (maxMainCourseDisplay) {
+                    maxMainCourseDisplay.textContent = maxMainCourses;
+                }
+            }
+
+            setupNumberSelector('appetizerGroup', formData.appetizers);
+            setupNumberSelector('mainCourseGroup', formData.mainCourses);
+            setupNumberSelector('drinksGroup', formData.cocktails);
+
+            document.getElementById('additionalNotes').addEventListener('input', function() {
+                formData.additionalNotes = this.value;
+            });
+
+            document.getElementById('back3').addEventListener('click', function() {
+                showStep(2);
+            });
+
+            document.getElementById('submitBtn').addEventListener('click', function() {
+                sendConfirmation();
+            });
+
+            function sendConfirmation() {
+                document.getElementById('formGuestName').value = formData.guestName;
+                document.getElementById('formAttendance').value = formData.attendance === 'yes' ? 'Yes' : 'No';
+                document.getElementById('formReception').value = formData.reception === 'yes' ? 'Yes' : 'No';
+                document.getElementById('formCompanion').value = formData.companion;
+                document.getElementById('formGuestCount').value = formData.guestCount;
+                document.getElementById('formAppetizers').value = formatSelections(formData.appetizers);
+                document.getElementById('formMainCourses').value = formatSelections(formData.mainCourses);
+                document.getElementById('formCocktails').value = formatSelections(formData.cocktails);
+                document.getElementById('formNotes').value = formData.additionalNotes || 'None';
+                
+                const form = document.getElementById('confirmationForm');
+                
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    showThankYou();
+                }).catch(error => {
+                    showThankYou();
+                });
+            }
+
+            function formatSelections(obj) {
+                const items = [];
+                for (const [key, value] of Object.entries(obj)) {
+                    if (value > 0) {
+                        items.push(`${key} x${value}`);
+                    }
+                }
+                return items.length > 0 ? items.join(', ') : 'None';
+            }
+
+            function sendSimpleConfirmation() {
+                document.getElementById('formGuestName').value = formData.guestName;
+                document.getElementById('formAttendance').value = 'No';
+                document.getElementById('formReception').value = 'No';
+                document.getElementById('formCompanion').value = 'N/A';
+                document.getElementById('formGuestCount').value = '0';
+                document.getElementById('formAppetizers').value = 'N/A';
+                document.getElementById('formMainCourses').value = 'N/A';
+                document.getElementById('formCocktails').value = 'N/A';
+                document.getElementById('formNotes').value = 'Guest confirmed they cannot attend';
+                
+                const form = document.getElementById('confirmationForm');
+                
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    showThankYouNo();
+                }).catch(error => {
+                    showThankYouNo();
+                });
+            }
+
+            function showThankYouNo() {
+                document.body.innerHTML = `
+                    <div class="peony-bg">
+                        <img src="images/peony1.jpeg" alt="">
+                    </div>
+                    <div class="peony-overlay"></div>
+                    
+                    <div class="container" style="animation: fadeIn 0.8s ease;">
+                        <div class="header">
+                            <div class="header-content">
+                                <div class="header-ornament"></div>
+                                <h1>Thank You!</h1>
+                                <p>We're sorry you can't make it</p>
+                                <div class="floral-divider">
+                                    <div class="floral-line"></div>
+                                    <div class="floral-icon"></div>
+                                    <div class="floral-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-container" style="text-align: center;">
+                            <h2 style="font-family: 'Cormorant Garamond', serif; color: #5a5045; margin-bottom: 20px; font-weight: 500;">
+                                We're sorry you can't make it!
+                            </h2>
+                            <p style="color: #8a7a7a; line-height: 1.8; margin-bottom: 30px;">
+                                Thank you for letting us know. We will miss you at the celebration.
+                            </p>
+                            
+                            <div style="background: linear-gradient(180deg, #ffffff 0%, #faf5ee 100%); border-radius: 20px; padding: 30px; margin-bottom: 25px; border: 1px solid #e6ceaa;">
+                                <h3 style="color: #5a5045; margin-bottom: 15px; font-weight: 500;">Gift Information</h3>
+                                <p style="color: #5a5045; line-height: 1.7; font-size: 1.1rem;">
+                                    If you'd like to honor Antonietta with a gift,<br>
+                                    <strong>cash gifts are most welcome</strong>.<br><br>
+                                    Thank you for your generosity!
+                                </p>
+                            </div>
+
+                            <div style="background: linear-gradient(180deg, #ffffff 0%, #faf5ee 100%); border-radius: 20px; padding: 30px; margin-bottom: 25px; border: 1px solid #e6ceaa;">
+                                <h3 style="color: #5a5045; margin-bottom: 15px; font-weight: 500;">Contact Information</h3>
+                                <p style="color: #5a5045; line-height: 1.7;">
+                                    For more information, please contact:<br>
+                                    <strong>Isabel Dentici</strong><br>
+                                    +1 (941) 284-4238
+                                </p>
+                            </div>
+
+                            <button class="btn btn-primary" onclick="location.reload()" style="margin-top: 10px;">
+                                Submit Another Response
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <style>
+                        * { margin: 0; padding: 0; box-sizing: border-box; }
+                        body {
+                            font-family: 'Montserrat', sans-serif;
+                            background: linear-gradient(135deg, #fdf6f3 0%, #f8e8e4 50%, #f5ebe6 100%);
+                            min-height: 100vh;
+                            padding: 30px 20px;
+                            position: relative;
+                        }
+                        .peony-bg {
+                            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
+                        }
+                        .peony-bg img {
+                            width: 100%; height: 100%; object-fit: cover; opacity: 0.6;
+                        }
+                        .peony-overlay {
+                            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                            background: linear-gradient(135deg, rgba(253, 246, 243, 0.4) 0%, rgba(248, 232, 228, 0.4) 50%, rgba(245, 235, 230, 0.4) 100%);
+                            z-index: 0; pointer-events: none;
+                        }
+                        .container {
+                            max-width: 650px; margin: 0 auto; background: #ffffff;
+                            border-radius: 30px;
+                            box-shadow: 0 25px 80px rgba(230, 206, 170, 0.25), 0 10px 30px rgba(230, 206, 170, 0.15);
+                            overflow: hidden; position: relative; z-index: 1;
+                            border: 1px solid rgba(230, 206, 170, 0.3);
+                        }
+                        .header {
+                            background: linear-gradient(135deg, #e6ceaa 0%, #d4b896 30%, #c9a87a 70%, #b8946b 100%);
+                            color: white; text-align: center; padding: 50px 40px; position: relative; overflow: hidden;
+                        }
+                        .header-content { position: relative; z-index: 1; }
+                        .header-ornament { width: 60px; height: 2px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent); margin: 0 auto 20px; }
+                        .header h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 600; margin-bottom: 8px; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+                        .header p { font-size: 1rem; opacity: 0.95; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; }
+                        .floral-divider { display: flex; align-items: center; justify-content: center; gap: 15px; margin: 15px 0; }
+                        .floral-line { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent); }
+                        .floral-icon { width: 12px; height: 12px; background: rgba(255,255,255,0.6); border-radius: 50%; position: relative; }
+                        .form-container { padding: 45px 50px; }
+                        .btn {
+                            flex: 1; padding: 16px 30px; border: none; border-radius: 12px;
+                            font-size: 1rem; font-family: 'Montserrat', sans-serif; font-weight: 500;
+                            cursor: pointer; transition: all 0.3s; letter-spacing: 0.5px;
+                        }
+                        .btn-primary {
+                            background: linear-gradient(135deg, #e6ceaa 0%, #d4b896 100%);
+                            color: white; box-shadow: 0 6px 20px rgba(230, 206, 170, 0.4);
+                        }
+                        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(230, 206, 170, 0.5); }
+                        @keyframes fadeIn {
+                            from { opacity: 0; transform: translateY(20px); }
+                            to { opacity: 1; transform: translateY(0); }
+                        }
+                    </style>
+                `;
+            }
+
+            function showThankYou() {
+                const appetizersStr = formatSelections(formData.appetizers);
+                const mainCoursesStr = formatSelections(formData.mainCourses);
+                const cocktailsStr = formatSelections(formData.cocktails);
+
+                document.body.innerHTML = `
+                    <div class="peony-bg">
+                        <img src="images/peony1.jpeg" alt="">
+                    </div>
+                    <div class="peony-overlay"></div>
+                    
+                    <div class="container" style="animation: fadeIn 0.8s ease;">
+                        <div class="header">
+                            <div class="header-content">
+                                <div class="header-ornament"></div>
+                                <h1>Thank You!</h1>
+                                <p>Your confirmation has been received</p>
+                                <div class="floral-divider">
+                                    <div class="floral-line"></div>
+                                    <div class="floral-icon"></div>
+                                    <div class="floral-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-container" style="text-align: center;">
+                            <h2 style="font-family: 'Cormorant Garamond', serif; color: #5a5045; margin-bottom: 20px; font-weight: 500;">
+                                We can't wait to celebrate with you!
+                            </h2>
+                            <p style="color: #8a7a7a; line-height: 1.8; margin-bottom: 30px;">
+                                Your response has been recorded.
+                            </p>
+                            
+                            <div style="background: linear-gradient(180deg, #ffffff 0%, #faf5ee 100%); border-radius: 20px; padding: 30px; margin-bottom: 25px; text-align: left; border: 1px solid #e6ceaa;">
+                                <h3 style="color: #5a5045; margin-bottom: 20px; font-weight: 500; text-align: center;">Event Details</h3>
+                                
+                                <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid #e6ceaa;">
+                                    <h4 style="color: #e6ceaa; margin-bottom: 12px; font-weight: 500;">Baptism</h4>
+                                    <p style="color: #5a5045; margin-bottom: 4px;"><strong>Date:</strong> May 3rd, 2026</p>
+                                    <p style="color: #5a5045; margin-bottom: 4px;"><strong>Time:</strong> 1:00 PM</p>
+                                    <p style="color: #5a5045; margin-bottom: 4px;"><strong>Location:</strong></p>
+                                    <p style="color: #5a5045; margin-left: 15px; margin-bottom: 2px;">St. Martha Catholic Church</p>
+                                    <p style="color: #5a5045; margin-left: 15px; margin-bottom: 2px;">200 N Orange Ave</p>
+                                    <p style="color: #5a5045; margin-left: 15px;">Sarasota, FL 34236</p>
+                                </div>
+                                
+                                <div>
+                                    <h4 style="color: #e6ceaa; margin-bottom: 12px; font-weight: 500;">Reception</h4>
+                                    <p style="color: #5a5045; margin-bottom: 4px;"><strong>Date:</strong> May 3rd, 2026</p>
+                                    <p style="color: #5a5045; margin-bottom: 4px;"><strong>Time:</strong> 2:00 PM - 5:00 PM</p>
+                                    <p style="color: #5a5045; margin-bottom: 4px;"><strong>Location:</strong></p>
+                                    <p style="color: #5a5045; margin-left: 15px; margin-bottom: 2px;">Siesta Key Room</p>
+                                    <p style="color: #5a5045; margin-left: 15px; margin-bottom: 2px;">Ocean Prime Sarasota</p>
+                                    <p style="color: #5a5045; margin-left: 15px; margin-bottom: 2px;">501 Quay Commons</p>
+                                    <p style="color: #5a5045; margin-left: 15px;">Sarasota, FL 34236</p>
+                                </div>
+                            </div>
+
+                            <div style="background: linear-gradient(180deg, #ffffff 0%, #faf5ee 100%); border-radius: 20px; padding: 30px; margin-bottom: 25px; border: 1px solid #e6ceaa;">
+                                <h3 style="color: #5a5045; margin-bottom: 15px; font-weight: 500;">Gift Information</h3>
+                                <p style="color: #5a5045; line-height: 1.7;">
+                                    If you'd like to honor Antonietta with a gift, <strong>cash gifts are welcome</strong>.<br>
+                                    Thank you for your generosity!
+                                </p>
+                            </div>
+
+                            <div style="background: linear-gradient(180deg, #ffffff 0%, #faf5ee 100%); border-radius: 20px; padding: 30px; margin-bottom: 25px; text-align: left; border: 1px solid #e6ceaa;">
+                                <h3 style="color: #5a5045; margin-bottom: 15px; font-weight: 500; text-align: center;">Your Response Summary</h3>
+                                <p style="color: #5a5045; margin-bottom: 8px;"><strong>Name:</strong> ${formData.guestName}</p>
+                                <p style="color: #5a5045; margin-bottom: 8px;"><strong>Attending Baptism:</strong> ${formData.attendance === 'yes' ? 'Yes' : 'No'}</p>
+                                
+                                ${formData.attendance === 'yes' ? `
+                                    <p style="color: #5a5045; margin-bottom: 8px;"><strong>Attending Reception:</strong> ${formData.reception === 'yes' ? 'Yes' : 'No'}</p>
+                                    
+                                    ${formData.reception === 'yes' ? `
+                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Coming:</strong> ${formData.companion === 'alone' ? 'Alone' : 'With company'}</p>
+                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Number of guests:</strong> ${formData.guestCount}</p>
+                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Appetizers:</strong> ${appetizersStr}</p>
+                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Main Courses:</strong> ${mainCoursesStr}</p>
+                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Cocktails:</strong> ${cocktailsStr}</p>
+                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Soft Drinks:</strong> Available at venue</p>
+                                        ${formData.additionalNotes ? `<p style="color: #5a5045;"><strong>Notes:</strong> ${formData.additionalNotes}</p>` : ''}
+                                    ` : ''}
+                                ` : ''}
+                            </div>
+
+                            <div style="background: linear-gradient(180deg, #ffffff 0%, #faf5ee 100%); border-radius: 20px; padding: 30px; margin-bottom: 25px; border: 1px solid #e6ceaa;">
+                                <h3 style="color: #5a5045; margin-bottom: 15px; font-weight: 500;">Contact Information</h3>
+                                <p style="color: #5a5045; line-height: 1.7;">
+                                    For more information, please contact:<br>
+                                    <strong>Isabel Dentici</strong><br>
+                                    +1 (941) 284-4238
+                                </p>
+                            </div>
+
+                            <button class="btn btn-primary" onclick="location.reload()" style="margin-top: 10px;">
+                                Submit Another Response
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <style>
+                        * { margin: 0; padding: 0; box-sizing: border-box; }
+                        body {
+                            font-family: 'Montserrat', sans-serif;
+                            background: linear-gradient(135deg, #fdf6f3 0%, #f8e8e4 50%, #f5ebe6 100%);
+                            min-height: 100vh;
+                            padding: 30px 20px;
+                            position: relative;
+                        }
+                        .peony-bg {
+                            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
+                        }
+                        .peony-bg img {
+                            width: 100%; height: 100%; object-fit: cover; opacity: 0.6;
+                        }
+                        .peony-overlay {
+                            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                            background: linear-gradient(135deg, rgba(253, 246, 243, 0.4) 0%, rgba(248, 232, 228, 0.4) 50%, rgba(245, 235, 230, 0.4) 100%);
+                            z-index: 0; pointer-events: none;
+                        }
+                        .container {
+                            max-width: 650px; margin: 0 auto; background: #ffffff;
+                            border-radius: 30px;
+                            box-shadow: 0 25px 80px rgba(230, 206, 170, 0.25), 0 10px 30px rgba(230, 206, 170, 0.15);
+                            overflow: hidden; position: relative; z-index: 1;
+                            border: 1px solid rgba(230, 206, 170, 0.3);
+                        }
+                        .header {
+                            background: linear-gradient(135deg, #e6ceaa 0%, #d4b896 30%, #c9a87a 70%, #b8946b 100%);
+                            color: white; text-align: center; padding: 50px 40px; position: relative; overflow: hidden;
+                        }
+                        .header-content { position: relative; z-index: 1; }
+                        .header-ornament { width: 60px; height: 2px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent); margin: 0 auto 20px; }
+                        .header h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 600; margin-bottom: 8px; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+                        .header p { font-size: 1rem; opacity: 0.95; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; }
+                        .floral-divider { display: flex; align-items: center; justify-content: center; gap: 15px; margin: 15px 0; }
+                        .floral-line { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent); }
+                        .floral-icon { width: 12px; height: 12px; background: rgba(255,255,255,0.6); border-radius: 50%; position: relative; }
+                        .form-container { padding: 45px 50px; }
+                        .btn {
+                            flex: 1; padding: 16px 30px; border: none; border-radius: 12px;
+                            font-size: 1rem; font-family: 'Montserrat', sans-serif; font-weight: 500;
+                            cursor: pointer; transition: all 0.3s; letter-spacing: 0.5px;
+                        }
+                        .btn-primary {
+                            background: linear-gradient(135deg, #e6ceaa 0%, #d4b896 100%);
+                            color: white; box-shadow: 0 6px 20px rgba(230, 206, 170, 0.4);
+                        }
+                        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(230, 206, 170, 0.5); }
+                        @keyframes fadeIn {
+                            from { opacity: 0; transform: translateY(20px); }
+                            to { opacity: 1; transform: translateY(0); }
+                        }
+                    </style>
+                `;
+            }
+
+        })();
+    </script>
+</body>
+</html>
