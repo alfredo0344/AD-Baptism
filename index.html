@@ -816,24 +816,24 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Appetizer (Select quantity for each option)</label>
+                    <label>Reception (Select quantity for each option)</label>
                     <div class="drinks-warning" style="margin-bottom: 10px;">
-                        Maximum <span id="maxAppetizers">1</span> appetizers total (1 per person)
+                        Maximum <span id="maxAppetizers">1</span> items total (1 per person)
                     </div>
-                    <div class="drinks-counter" id="appetizerCounter">Appetizers: 0 / 1</div>
+                    <div class="drinks-counter" id="appetizerCounter">Reception: 0 / 1</div>
                     <div class="number-select-group" id="appetizerGroup">
-                        <div class="number-option" data-value="House Salad">
-                            <span>House Salad</span>
-                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Romaine, Field Greens, Granny Smith Apples, Goat Cheese, Walnuts, Sherry Mustard Vinaigrette</small>
+                        <div class="number-option" data-value="Housemade Hummus & Vegetable Crudité">
+                            <span>Housemade Hummus & Vegetable Crudité</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Cucumbers, carrots, campari tomatoes & lavash crackers</small>
                             <div class="number-controls">
                                 <button type="button" class="num-btn minus" data-action="minus">-</button>
                                 <input type="number" class="num-input" value="0" min="0" readonly>
                                 <button type="button" class="num-btn plus" data-action="plus">+</button>
                             </div>
                         </div>
-                        <div class="number-option" data-value="Caesar Salad">
-                            <span>Caesar Salad</span>
-                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Crisp Romaine, Parmesan Garlic Dressing, Brioche Croutons</small>
+                        <div class="number-option" data-value="Sweet & Spicy Filet Bites">
+                            <span>Sweet & Spicy Filet Bites*</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Peppercorn sauce</small>
                             <div class="number-controls">
                                 <button type="button" class="num-btn minus" data-action="minus">-</button>
                                 <input type="number" class="num-input" value="0" min="0" readonly>
@@ -844,33 +844,70 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Main Course (Select quantity for each option)</label>
+                    <label>Starter (Select quantity for each option)</label>
                     <div class="drinks-warning" style="margin-bottom: 10px;">
-                        Maximum <span id="maxMainCourse">1</span> main courses total (1 per person)
+                        Maximum <span id="maxMainCourse">1</span> starter total (1 per person)
                     </div>
-                    <div class="drinks-counter" id="mainCourseCounter">Main Courses: 0 / 1</div>
+                    <div class="drinks-counter" id="mainCourseCounter">Starter: 0 / 1</div>
                     <div class="number-select-group" id="mainCourseGroup">
-                        <div class="number-option" data-value="Roasted Chicken">
-                            <span>Roasted Chicken</span>
-                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Spinach Bread Salad, Roasted Tomatoes, Olives, Balsamic Jus</small>
+                        <div class="number-option" data-value="Caesar Salad">
+                            <span>Caesar Salad</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Romaine, parmesan, fried capers, crispy prosciutto</small>
                             <div class="number-controls">
                                 <button type="button" class="num-btn minus" data-action="minus">-</button>
                                 <input type="number" class="num-input" value="0" min="0" readonly>
                                 <button type="button" class="num-btn plus" data-action="plus">+</button>
                             </div>
                         </div>
-                        <div class="number-option" data-value="Filet Mignon">
-                            <span>Filet Mignon</span>
-                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Gouda Potato Cake, Seared Spinach, Cabernet Jus</small>
+                        <div class="number-option" data-value="Yellowtail Crudo">
+                            <span>Yellowtail Crudo*</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Ponzu sauce, gochugaru flakes, carrot-cucumber slaw</small>
                             <div class="number-controls">
                                 <button type="button" class="num-btn minus" data-action="minus">-</button>
                                 <input type="number" class="num-input" value="0" min="0" readonly>
                                 <button type="button" class="num-btn plus" data-action="plus">+</button>
                             </div>
                         </div>
-                        <div class="number-option" data-value="Chilean Sea Bass">
-                            <span>Chilean Sea Bass</span>
-                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Brocollini, Pearl Onion, Potato Puree, Truffle Vinaigrette</small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Entrée (Select quantity for each option)</label>
+                    <div class="drinks-warning" style="margin-bottom: 10px;">
+                        Maximum <span id="maxEntrees">1</span> entrée total (1 per person)
+                    </div>
+                    <div class="drinks-counter" id="entreeCounter">Entrée: 0 / 1</div>
+                    <div class="number-select-group" id="entreeGroup">
+                        <div class="number-option" data-value="Petite Filet Mignon & Colossal Diablo Shrimp">
+                            <span>Petite Filet Mignon* & Colossal Diablo Shrimp</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">8 oz, spicy barbecue butter sauce</small>
+                            <div class="number-controls">
+                                <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                <input type="number" class="num-input" value="0" min="0" readonly>
+                                <button type="button" class="num-btn plus" data-action="plus">+</button>
+                            </div>
+                        </div>
+                        <div class="number-option" data-value="Seared Yellowfin Tuna">
+                            <span>Seared Yellowfin Tuna*</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Pepper crusted, carrot-ginger puree, arugula, pickled onion, campari tomato</small>
+                            <div class="number-controls">
+                                <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                <input type="number" class="num-input" value="0" min="0" readonly>
+                                <button type="button" class="num-btn plus" data-action="plus">+</button>
+                            </div>
+                        </div>
+                        <div class="number-option" data-value="Double Breast of Chicken">
+                            <span>Double Breast of Chicken</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">All-natural, roasted, white wine, mushroom, leek & thyme sauce</small>
+                            <div class="number-controls">
+                                <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                <input type="number" class="num-input" value="0" min="0" readonly>
+                                <button type="button" class="num-btn plus" data-action="plus">+</button>
+                            </div>
+                        </div>
+                        <div class="number-option" data-value="Mushroom & Tomato Ragout Pasta">
+                            <span>Mushroom & Tomato Ragout Pasta</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Burrata, campari tomato, torn basil</small>
                             <div class="number-controls">
                                 <button type="button" class="num-btn minus" data-action="minus">-</button>
                                 <input type="number" class="num-input" value="0" min="0" readonly>
@@ -881,28 +918,182 @@
                 </div>
 
                 <div class="drinks-section">
-                    <label>Cocktails (Max 2 per person)</label>
+                    <label>Non-Alcoholic Beverages (Max 2 per person)</label>
                     <div class="drinks-warning">
-                        Maximum 2 cocktails per person. Total: <span id="maxCocktails">2</span>
+                        Maximum 2 beverages per person. Total: <span id="maxCocktails">2</span>
                     </div>
-                    <div class="drinks-counter" id="drinksCounter">Cocktails: 0 / 2</div>
+                    <div class="drinks-counter" id="drinksCounter">Non-Alcoholic Beverages: 0 / 2</div>
                     <div class="number-select-group" id="drinksGroup">
-                        <div class="number-option" data-value="Bourbon Old Fashioned">
-                            <span>Bourbon Old Fashioned</span>
-                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Buffalo Trace Bourbon, Aperol, Simple Syrup, Angostura Aromatic Bitters</small>
+                        <div class="number-option" data-value="Tropical Tee">
+                            <span>Tropical Tee</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Aromatic mint, freshly brewed tea, tropical juice blend</small>
                             <div class="number-controls">
                                 <button type="button" class="num-btn minus" data-action="minus">-</button>
                                 <input type="number" class="num-input" value="0" min="0" readonly>
                                 <button type="button" class="num-btn plus" data-action="plus">+</button>
                             </div>
                         </div>
-                        <div class="number-option" data-value="Berries & Bubbles">
-                            <span>Berries & Bubbles</span>
-                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Belvedere Organic Lemon & Basil Vodka, Marinated Blackberries, Fresh Lemon Juice, Piper Sonoma Brut, Dry Ice Smoke</small>
+                        <div class="number-option" data-value="Blackberry Lavenderade">
+                            <span>Blackberry Lavenderade</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Ripe blackberries, lemon, Monin Lavender syrup & sparkling water</small>
                             <div class="number-controls">
                                 <button type="button" class="num-btn minus" data-action="minus">-</button>
                                 <input type="number" class="num-input" value="0" min="0" readonly>
                                 <button type="button" class="num-btn plus" data-action="plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 25px;">
+                    <label>Dessert (Select quantity for each option)</label>
+                    <div class="drinks-warning" style="margin-bottom: 10px;">
+                        Maximum <span id="maxDesserts">1</span> dessert total (1 per person)
+                    </div>
+                    <div class="drinks-counter" id="dessertCounter">Dessert: 0 / 1</div>
+                    <div class="number-select-group" id="dessertGroup">
+                        <div class="number-option" data-value="New York Cheesecake">
+                            <span>New York Cheesecake</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Classic preparation with seasonal fruit garnish</small>
+                            <div class="number-controls">
+                                <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                <input type="number" class="num-input" value="0" min="0" readonly>
+                                <button type="button" class="num-btn plus" data-action="plus">+</button>
+                            </div>
+                        </div>
+                        <div class="number-option" data-value="Chocolate Gooey Brownie">
+                            <span>Chocolate Gooey Brownie</span>
+                            <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Honeycomb brittle, chocolate sauce & caramel</small>
+                            <div class="number-controls">
+                                <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                <input type="number" class="num-input" value="0" min="0" readonly>
+                                <button type="button" class="num-btn plus" data-action="plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 25px;">
+                    <label>How many children will come with you?</label>
+                    <div class="number-select-group" style="max-width: 200px; margin: 0 auto;">
+                        <div class="number-option" id="kidsCountOption">
+                            <span>Children</span>
+                            <div class="number-controls">
+                                <button type="button" class="num-btn minus" id="kidsMinus">-</button>
+                                <input type="number" class="num-input" id="kidsCount" value="0" min="0" readonly>
+                                <button type="button" class="num-btn plus" id="kidsPlus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" id="kidsMenuSection" style="display: none; margin-top: 25px;">
+                    <label>Children's Menu (Select quantity for each option)</label>
+                    
+                    <div style="margin-top: 20px;">
+                        <p style="color: #5a5045; font-weight: 500; margin-bottom: 15px; text-align: center;">STARTER</p>
+                        <div class="number-select-group" id="kidsStarterGroup">
+                            <div class="number-option" data-value="Classic Salad">
+                                <span>Classic Salad</span>
+                                <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Iceberg lettuce, tomatoes, cucumbers, shredded cheese, olive oil and vinegar dressing</small>
+                                <div class="number-controls">
+                                    <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                    <input type="number" class="num-input" value="0" min="0" readonly>
+                                    <button type="button" class="num-btn plus" data-action="plus">+</button>
+                                </div>
+                            </div>
+                            <div class="number-option" data-value="Cheese & Crackers">
+                                <span>Cheese & Crackers</span>
+                                <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Carrots, cucumbers, cheese, lavash crackers, ranch dressing</small>
+                                <div class="number-controls">
+                                    <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                    <input type="number" class="num-input" value="0" min="0" readonly>
+                                    <button type="button" class="num-btn plus" data-action="plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 25px;">
+                        <p style="color: #5a5045; font-weight: 500; margin-bottom: 15px; text-align: center;">ENTRÉE</p>
+                        <div class="number-select-group" id="kidsEntreeGroup">
+                            <div class="number-option" data-value="Filet Mignon">
+                                <span>Filet Mignon*</span>
+                                <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">6 oz of our leanest, most tender cut of beef served with a side of french fries</small>
+                                <div class="number-controls">
+                                    <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                    <input type="number" class="num-input" value="0" min="0" readonly>
+                                    <button type="button" class="num-btn plus" data-action="plus">+</button>
+                                </div>
+                            </div>
+                            <div class="number-option" data-value="Chicken Tenders">
+                                <span>Chicken Tenders</span>
+                                <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Crispy chicken breast tenders served with a side of french fries</small>
+                                <div class="number-controls">
+                                    <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                    <input type="number" class="num-input" value="0" min="0" readonly>
+                                    <button type="button" class="num-btn plus" data-action="plus">+</button>
+                                </div>
+                            </div>
+                            <div class="number-option" data-value="Mac & Cheese">
+                                <span>Mac & Cheese</span>
+                                <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">A Fleming's favorite, topped with crisp bacon</small>
+                                <div class="number-controls">
+                                    <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                    <input type="number" class="num-input" value="0" min="0" readonly>
+                                    <button type="button" class="num-btn plus" data-action="plus">+</button>
+                                </div>
+                            </div>
+                            <div class="number-option" data-value="Fleming's Prime Steakhouse Sliders">
+                                <span>Fleming's Prime Steakhouse Sliders</span>
+                                <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Wisconsin cheddar cheese, red onion confit, campari tomato, black garlic aioli, Fleming's butter pickles served with a side of french fries</small>
+                                <div class="number-controls">
+                                    <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                    <input type="number" class="num-input" value="0" min="0" readonly>
+                                    <button type="button" class="num-btn plus" data-action="plus">+</button>
+                                </div>
+                            </div>
+                            <div class="number-option" data-value="Classically Grilled Salmon">
+                                <span>Classically Grilled Salmon</span>
+                                <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Served with a choice of steamed spinach (20 cal) or asparagus</small>
+                                <div class="number-controls">
+                                    <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                    <input type="number" class="num-input" value="0" min="0" readonly>
+                                    <button type="button" class="num-btn plus" data-action="plus">+</button>
+                                </div>
+                            </div>
+                            <div class="number-option" data-value="Classically Grilled Chicken Breast">
+                                <span>Classically Grilled Chicken Breast</span>
+                                <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Served with a choice of steamed spinach (20 cal) or asparagus</small>
+                                <div class="number-controls">
+                                    <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                    <input type="number" class="num-input" value="0" min="0" readonly>
+                                    <button type="button" class="num-btn plus" data-action="plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 25px;">
+                        <p style="color: #5a5045; font-weight: 500; margin-bottom: 15px; text-align: center;">DESSERT</p>
+                        <div class="number-select-group" id="kidsDessertGroup">
+                            <div class="number-option" data-value="Fresh Fruit Bowl">
+                                <span>Fresh Fruit Bowl</span>
+                                <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Strawberries, blueberries and pineapple</small>
+                                <div class="number-controls">
+                                    <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                    <input type="number" class="num-input" value="0" min="0" readonly>
+                                    <button type="button" class="num-btn plus" data-action="plus">+</button>
+                                </div>
+                            </div>
+                            <div class="number-option" data-value="Ice Cream Sundae">
+                                <span>Ice Cream Sundae</span>
+                                <small style="display: block; font-size: 0.75rem; color: #8a7a6a; margin-top: 2px;">Vanilla ice cream, caramel, whipped cream, chocolate dipped tuile with sprinkles</small>
+                                <div class="number-controls">
+                                    <button type="button" class="num-btn minus" data-action="minus">-</button>
+                                    <input type="number" class="num-input" value="0" min="0" readonly>
+                                    <button type="button" class="num-btn plus" data-action="plus">+</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -934,6 +1125,12 @@
         <input type="text" name="guest_count" id="formGuestCount">
         <input type="text" name="appetizers" id="formAppetizers">
         <input type="text" name="main_courses" id="formMainCourses">
+        <input type="text" name="entrees" id="formEntrees">
+        <input type="text" name="desserts" id="formDesserts">
+        <input type="text" name="kids_count" id="formKidsCount">
+        <input type="text" name="kids_starters" id="formKidsStarters">
+        <input type="text" name="kids_entrees" id="formKidsEntrees">
+        <input type="text" name="kids_desserts" id="formKidsDesserts">
         <input type="text" name="cocktails" id="formCocktails">
         <input type="text" name="guest_names" id="formGuestNames">
         <input type="text" name="notes" id="formNotes">
@@ -949,6 +1146,12 @@
                 guestCount: 1,
                 appetizers: {},
                 mainCourses: {},
+                entrees: {},
+                desserts: {},
+                kidsCount: 0,
+                kidsStarters: {},
+                kidsEntrees: {},
+                kidsDesserts: {},
                 cocktails: {},
                 additionalNotes: ''
             };
@@ -1025,6 +1228,12 @@
                 document.getElementById('formGuestCount').value = '1';
                 document.getElementById('formAppetizers').value = 'N/A';
                 document.getElementById('formMainCourses').value = 'N/A';
+                document.getElementById('formEntrees').value = 'N/A';
+                document.getElementById('formDesserts').value = 'N/A';
+                document.getElementById('formKidsCount').value = '0';
+                document.getElementById('formKidsStarters').value = 'N/A';
+                document.getElementById('formKidsEntrees').value = 'N/A';
+                document.getElementById('formKidsDesserts').value = 'N/A';
                 document.getElementById('formCocktails').value = 'N/A';
                 document.getElementById('formNotes').value = 'Guest will attend baptism only, not reception';
                 
@@ -1261,6 +1470,8 @@
                         let maxAllowed;
                         if (groupId === 'drinksGroup') {
                             maxAllowed = formData.guestCount * maxCocktailsPerPerson;
+                        } else if (groupId === 'kidsStarterGroup' || groupId === 'kidsEntreeGroup' || groupId === 'kidsDessertGroup') {
+                            maxAllowed = formData.kidsCount;
                         } else {
                             maxAllowed = formData.guestCount;
                         }
@@ -1293,7 +1504,7 @@
                 
                 const drinksCounter = document.getElementById('drinksCounter');
                 if (drinksCounter) {
-                    drinksCounter.textContent = `Cocktails: ${totalCocktails} / ${maxCocktails}`;
+                    drinksCounter.textContent = `Non-Alcoholic Beverages: ${totalCocktails} / ${maxCocktails}`;
                     drinksCounter.style.color = totalCocktails > maxCocktails ? '#dc3545' : '#7a5c5c';
                 }
                 
@@ -1308,7 +1519,7 @@
                 
                 const appetizerCounter = document.getElementById('appetizerCounter');
                 if (appetizerCounter) {
-                    appetizerCounter.textContent = `Appetizers: ${totalAppetizers} / ${maxAppetizers}`;
+                    appetizerCounter.textContent = `Reception: ${totalAppetizers} / ${maxAppetizers}`;
                     appetizerCounter.style.color = totalAppetizers > maxAppetizers ? '#dc3545' : '#7a5c5c';
                 }
                 
@@ -1323,7 +1534,7 @@
                 
                 const mainCourseCounter = document.getElementById('mainCourseCounter');
                 if (mainCourseCounter) {
-                    mainCourseCounter.textContent = `Main Courses: ${totalMainCourses} / ${maxMainCourses}`;
+                    mainCourseCounter.textContent = `Starter: ${totalMainCourses} / ${maxMainCourses}`;
                     mainCourseCounter.style.color = totalMainCourses > maxMainCourses ? '#dc3545' : '#7a5c5c';
                 }
                 
@@ -1331,11 +1542,89 @@
                 if (maxMainCourseDisplay) {
                     maxMainCourseDisplay.textContent = maxMainCourses;
                 }
+                
+                let totalEntrees = 0;
+                Object.values(formData.entrees).forEach(v => totalEntrees += v);
+                const maxEntrees = formData.guestCount;
+                
+                const entreeCounter = document.getElementById('entreeCounter');
+                if (entreeCounter) {
+                    entreeCounter.textContent = `Entrée: ${totalEntrees} / ${maxEntrees}`;
+                    entreeCounter.style.color = totalEntrees > maxEntrees ? '#dc3545' : '#7a5c5c';
+                }
+                
+                const maxEntreesDisplay = document.getElementById('maxEntrees');
+                if (maxEntreesDisplay) {
+                    maxEntreesDisplay.textContent = maxEntrees;
+                }
+                
+                let totalDesserts = 0;
+                Object.values(formData.desserts).forEach(v => totalDesserts += v);
+                const maxDesserts = formData.guestCount;
+                
+                const dessertCounter = document.getElementById('dessertCounter');
+                if (dessertCounter) {
+                    dessertCounter.textContent = `Dessert: ${totalDesserts} / ${maxDesserts}`;
+                    dessertCounter.style.color = totalDesserts > maxDesserts ? '#dc3545' : '#7a5c5c';
+                }
+                
+                const maxDessertsDisplay = document.getElementById('maxDesserts');
+                if (maxDessertsDisplay) {
+                    maxDessertsDisplay.textContent = maxDesserts;
+                }
             }
 
             setupNumberSelector('appetizerGroup', formData.appetizers);
             setupNumberSelector('mainCourseGroup', formData.mainCourses);
+            setupNumberSelector('entreeGroup', formData.entrees);
+            setupNumberSelector('dessertGroup', formData.desserts);
             setupNumberSelector('drinksGroup', formData.cocktails);
+
+            setupNumberSelector('kidsStarterGroup', formData.kidsStarters);
+            setupNumberSelector('kidsEntreeGroup', formData.kidsEntrees);
+            setupNumberSelector('kidsDessertGroup', formData.kidsDesserts);
+
+            const kidsCountInput = document.getElementById('kidsCount');
+            const kidsMenuSection = document.getElementById('kidsMenuSection');
+            const kidsMinusBtn = document.getElementById('kidsMinus');
+            const kidsPlusBtn = document.getElementById('kidsPlus');
+
+            kidsMinusBtn.addEventListener('click', function() {
+                let current = parseInt(kidsCountInput.value);
+                if (current > 0) {
+                    current--;
+                    kidsCountInput.value = current;
+                    formData.kidsCount = current;
+                    updateKidsMenuVisibility();
+                    resetKidsSelections();
+                }
+            });
+
+            kidsPlusBtn.addEventListener('click', function() {
+                let current = parseInt(kidsCountInput.value);
+                current++;
+                kidsCountInput.value = current;
+                formData.kidsCount = current;
+                updateKidsMenuVisibility();
+            });
+
+            function updateKidsMenuVisibility() {
+                if (formData.kidsCount > 0) {
+                    kidsMenuSection.style.display = 'block';
+                } else {
+                    kidsMenuSection.style.display = 'none';
+                }
+            }
+
+            function resetKidsSelections() {
+                formData.kidsStarters = {};
+                formData.kidsEntrees = {};
+                formData.kidsDesserts = {};
+                document.querySelectorAll('#kidsStarterGroup .number-option, #kidsEntreeGroup .number-option, #kidsDessertGroup .number-option').forEach(option => {
+                    option.querySelector('.num-input').value = 0;
+                    option.classList.remove('has-items');
+                });
+            }
 
             document.getElementById('additionalNotes').addEventListener('input', function() {
                 formData.additionalNotes = this.value;
@@ -1366,6 +1655,12 @@
                 document.getElementById('formGuestCount').value = formData.guestCount;
                 document.getElementById('formAppetizers').value = formatSelections(formData.appetizers);
                 document.getElementById('formMainCourses').value = formatSelections(formData.mainCourses);
+                document.getElementById('formEntrees').value = formatSelections(formData.entrees);
+                document.getElementById('formDesserts').value = formatSelections(formData.desserts);
+                document.getElementById('formKidsCount').value = formData.kidsCount;
+                document.getElementById('formKidsStarters').value = formatSelections(formData.kidsStarters);
+                document.getElementById('formKidsEntrees').value = formatSelections(formData.kidsEntrees);
+                document.getElementById('formKidsDesserts').value = formatSelections(formData.kidsDesserts);
                 document.getElementById('formCocktails').value = formatSelections(formData.cocktails);
                 document.getElementById('formNotes').value = formData.additionalNotes || 'None';
                 
@@ -1402,6 +1697,12 @@
                 document.getElementById('formGuestCount').value = '0';
                 document.getElementById('formAppetizers').value = 'N/A';
                 document.getElementById('formMainCourses').value = 'N/A';
+                document.getElementById('formEntrees').value = 'N/A';
+                document.getElementById('formDesserts').value = 'N/A';
+                document.getElementById('formKidsCount').value = '0';
+                document.getElementById('formKidsStarters').value = 'N/A';
+                document.getElementById('formKidsEntrees').value = 'N/A';
+                document.getElementById('formKidsDesserts').value = 'N/A';
                 document.getElementById('formCocktails').value = 'N/A';
                 document.getElementById('formNotes').value = 'Guest confirmed they cannot attend';
                 
@@ -1533,6 +1834,11 @@
             function showThankYou() {
                 const appetizersStr = formatSelections(formData.appetizers);
                 const mainCoursesStr = formatSelections(formData.mainCourses);
+                const entreesStr = formatSelections(formData.entrees);
+                const dessertsStr = formatSelections(formData.desserts);
+                const kidsStartersStr = formatSelections(formData.kidsStarters);
+                const kidsEntreesStr = formatSelections(formData.kidsEntrees);
+                const kidsDessertsStr = formatSelections(formData.kidsDesserts);
                 const cocktailsStr = formatSelections(formData.cocktails);
 
                 document.body.innerHTML = `
@@ -1579,12 +1885,10 @@
                                 <div>
                                     <h4 style="color: #e6ceaa; margin-bottom: 12px; font-weight: 500;">Reception</h4>
                                     <p style="color: #5a5045; margin-bottom: 4px;"><strong>Date:</strong> May 3rd, 2026</p>
-                                    <p style="color: #5a5045; margin-bottom: 4px;"><strong>Time:</strong> 2:00 PM - 5:00 PM</p>
+                                    <p style="color: #5a5045; margin-bottom: 4px;"><strong>Time:</strong> 3:00 PM - 6:00 PM</p>
                                     <p style="color: #5a5045; margin-bottom: 4px;"><strong>Location:</strong></p>
-                                    <p style="color: #5a5045; margin-left: 15px; margin-bottom: 2px;">Siesta Key Room</p>
-                                    <p style="color: #5a5045; margin-left: 15px; margin-bottom: 2px;">Ocean Prime Sarasota</p>
-                                    <p style="color: #5a5045; margin-left: 15px; margin-bottom: 2px;">501 Quay Commons</p>
-                                    <p style="color: #5a5045; margin-left: 15px;">Sarasota, FL 34236</p>
+                                    <p style="color: #5a5045; margin-left: 15px; margin-bottom: 2px;">8306 Tourist Center Dr</p>
+                                    <p style="color: #5a5045; margin-left: 15px;">Bradenton, FL 34201</p>
                                 </div>
                             </div>
 
@@ -1607,9 +1911,17 @@
                                     ${formData.reception === 'yes' ? `
                                         <p style="color: #5a5045; margin-bottom: 8px;"><strong>Coming:</strong> ${formData.companion === 'alone' ? 'Alone' : 'With company'}</p>
                                         <p style="color: #5a5045; margin-bottom: 8px;"><strong>Number of guests:</strong> ${formData.guestCount}</p>
-                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Appetizers:</strong> ${appetizersStr}</p>
-                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Main Courses:</strong> ${mainCoursesStr}</p>
-                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Cocktails:</strong> ${cocktailsStr}</p>
+                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Reception:</strong> ${appetizersStr}</p>
+                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Starter:</strong> ${mainCoursesStr}</p>
+                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Entrée:</strong> ${entreesStr}</p>
+                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Dessert:</strong> ${dessertsStr}</p>
+                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Non-Alcoholic Beverages:</strong> ${cocktailsStr}</p>
+                                        ${formData.kidsCount > 0 ? `
+                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Children:</strong> ${formData.kidsCount}</p>
+                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Kids Starter:</strong> ${kidsStartersStr}</p>
+                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Kids Entrée:</strong> ${kidsEntreesStr}</p>
+                                        <p style="color: #5a5045; margin-bottom: 8px;"><strong>Kids Dessert:</strong> ${kidsDessertsStr}</p>
+                                        ` : ''}
                                         <p style="color: #5a5045; margin-bottom: 8px;"><strong>Soft Drinks:</strong> Available at venue</p>
                                         ${formData.additionalNotes ? `<p style="color: #5a5045;"><strong>Notes:</strong> ${formData.additionalNotes}</p>` : ''}
                                     ` : ''}
