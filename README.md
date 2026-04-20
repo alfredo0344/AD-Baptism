@@ -28,9 +28,8 @@ To receive confirmations via email, you need to set up EmailJS:
 3. Name the form
 4. Copy your Form endpoint
 5. In `index.html`, find the line:
-   ```form action =
-   ```
-   And replace the action`` with your actual Form endpoint.
+  form action =
+And replace the action`` with your actual Form endpoint.
 
 ## Preview
 
