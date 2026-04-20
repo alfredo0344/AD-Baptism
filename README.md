@@ -9,9 +9,10 @@ A beautiful, responsive website for collecting baptism attendance confirmations.
 - **Step 3**: Detailed preferences including:
   - Companion information
   - Number of guests
-  - Appetizer selection (House Salad or Caesar Salad)
-  - Main course selection (Roasted Chicken, Filet Mignon, Chilean Sea Bass)
-  - Cocktail selection (Bourbon Old Fashioned, Berries & Bubbles) - Max 2 per person
+  - Appetizer selection 
+  - Main course selection 
+  - Cocktail selection
+  - Kids section
   - Additional notes
 
 ## How to Open
@@ -22,24 +23,14 @@ Simply open `index.html` in any web browser.
 
 To receive confirmations via email, you need to set up EmailJS:
 
-1. Go to [emailjs.com](https://emailjs.com) and create a free account
-2. Create an Email Service (Gmail, Outlook, etc.)
-3. Create an Email Template with these variables:
-   - `{{guest_name}}`
-   - `{{attendance}}`
-   - `{{reception}}`
-   - `{{companion}}`
-   - `{{guest_count}}`
-   - `{{appetizers}}`
-   - `{{main_courses}}`
-   - `{{cocktails}}`
-   - `{{notes}}`
-4. Copy your Public Key
+1. Go to [[formspree.io]((https://formspree.io/)) and create a free account
+2. Add a new Form
+3. Name the form
+4. Copy your Form endpoint
 5. In `index.html`, find the line:
-   ```javascript
-   emailjs.init('YOUR_PUBLIC_KEY');
+   ```form action =
    ```
-   And replace `YOUR_PUBLIC_KEY` with your actual EmailJS Public Key.
+   And replace the action`` with your actual Form endpoint.
 
 ## Preview
 
